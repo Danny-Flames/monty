@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * _queue - this sets the format of the data to a queue (FIFO)
+ * f__queue - this sets the format of the data to a queue (FIFO)
  *
  * @doubly: to hold the head of the linked list
  * @cline: reps the line number;
  * Return: has no return
  */
-void _queue(stack_t **doubly, unsigned int cline)
+void f__queue(stack_t **doubly, unsigned int cline)
 {
 	(void)doubly;
 	(void)cline;
@@ -31,13 +31,13 @@ void _stack(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _add - this adds the top two elements of the stack
+ * fl_add - this adds the top two elements of the stack
  *
  * @doubly: the head of the linked list
  * @cline: reps the line number;
  * Return: has no return
  */
-void _add(stack_t **doubly, unsigned int cline)
+void fl_add(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
 	stack_t *aux = NULL;
@@ -56,30 +56,30 @@ void _add(stack_t **doubly, unsigned int cline)
 
 	aux = (*doubly)->next;
 	aux->n += (*doubly)->n;
-	_pop(doubly, cline);
+	__stack_pop(doubly, cline);
 }
 
 /**
- * _nop - this doesn't do anythinhg
+ * fl_nop - this doesn't do anythinhg
  *
  * @doubly: reps the head of the linked list
  * @cline: reps the line number;
  * Return: has no return
  */
-void _nop(stack_t **doubly, unsigned int cline)
+void fl_nop(stack_t **doubly, unsigned int cline)
 {
 	(void)doubly;
 	(void)cline;
 }
 
 /**
- * _sub - this subtracts the top element to the second top element of the stack
+ * fl_sub - this subtracts the top element to the second top element of the stack
  *
  * @doubly: the head of the linked list
  * @cline: has the line number;
  * Return: has no return
  */
-void _sub(stack_t **doubly, unsigned int cline)
+void fl_sub(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
 	stack_t *aux = NULL;
@@ -98,5 +98,5 @@ void _sub(stack_t **doubly, unsigned int cline)
 
 	aux = (*doubly)->next;
 	aux->n -= (*doubly)->n;
-	_pop(doubly, cline);
+	__stack_pop(doubly, cline);
 }

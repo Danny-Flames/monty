@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * _div - this divides the second element by the top element of the stack
+ * fl_div - this divides the second element by the top element of the stack
  *
  * @doubly: here's the head of the linked list
  * @cline: reps the line number;
  * Return: has no return
  */
-void _div(stack_t **doubly, unsigned int cline)
+void fl_div(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
 	stack_t *aux = NULL;
@@ -33,17 +33,17 @@ void _div(stack_t **doubly, unsigned int cline)
 
 	aux = (*doubly)->next;
 	aux->n /= (*doubly)->n;
-	_pop(doubly, cline);
+	__stack_pop(doubly, cline);
 }
 
 /**
- * _mul - this will multiply the top element to the second top element of the stack
+ * fl_mul - this will multiply the top element to the second top element of the stack
  *
  * @doubly: holds the head of the linked list
  * @cline: returns the line number;
  * Return: has no return
  */
-void _mul(stack_t **doubly, unsigned int cline)
+void fl_mul(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
 	stack_t *aux = NULL;
@@ -62,18 +62,18 @@ void _mul(stack_t **doubly, unsigned int cline)
 
 	aux = (*doubly)->next;
 	aux->n *= (*doubly)->n;
-	_pop(doubly, cline);
+	__stack_pop(doubly, cline);
 }
 
 /**
- * _mod - this computes the rest of the division of the second element
+ * fl_mod - this computes the rest of the division of the second element
  * by the top element of the stack and more..
  *
  * @doubly: for the head of the linked list
  * @cline: has the line number;
  * Return: has no no return
  */
-void _mod(stack_t **doubly, unsigned int cline)
+void fl_mod(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
 	stack_t *aux = NULL;
@@ -99,16 +99,16 @@ void _mod(stack_t **doubly, unsigned int cline)
 
 	aux = (*doubly)->next;
 	aux->n %= (*doubly)->n;
-	_pop(doubly, cline);
+	__stack_pop(doubly, cline);
 }
 /**
- * _pchar - this print the char value of the first element
+ * fl_pchar - this print the char value of the first element
  *
  * @doubly: reps thehead of the linked list
  * @cline: holds the line number;
  * Return: has no return
  */
-void _pchar(stack_t **doubly, unsigned int cline)
+void fl_pchar(stack_t **doubly, unsigned int cline)
 {
 	if (doubly == NULL || *doubly == NULL)
 	{
@@ -126,13 +126,13 @@ void _pchar(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _pstr - this will prints the string of the stack
+ * fl_pstr - this will prints the string of the stack
  *
  * @doubly: the head of the linked list
  * @cline: has the line number;
  * Return: has no return
  */
-void _pstr(stack_t **doubly, unsigned int cline)
+void fl_pstr(stack_t **doubly, unsigned int cline)
 {
 	stack_t *aux;
 	(void)cline;

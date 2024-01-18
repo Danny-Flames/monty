@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * _push - this will  pushes an element to the stack
+ * __stack_push - this will  pushes an element to the stack
  *
  * @doubly: to rep the head of the linked list
  * @cline: to rep the line number
  * Return: this will have no return
  */
-void _push(stack_t **doubly, unsigned int cline)
+void __stack_push(stack_t **doubly, unsigned int cline)
 {
 	int n, j;
 
@@ -39,13 +39,13 @@ void _push(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _pall - this will prints all values on the stack
+ * __stack_pall - this will prints all values on the stack
  *
  * @doubly: to rep head of the linked list
  * @cline: to hold the line numbers
  * Return: has no return
  */
-void _pall(stack_t **doubly, unsigned int cline)
+void __stack_pall(stack_t **doubly, unsigned int cline)
 {
 	stack_t *aux;
 	(void)cline;
@@ -60,13 +60,13 @@ void _pall(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _pint - this prints the value at the top of the stack
+ * __stack_pint - this prints the value at the top of the stack
  *
  * @doubly: to hold head of the linked list
  * @cline: to return the line number
  * Return: has no return
  */
-void _pint(stack_t **doubly, unsigned int cline)
+void __stack_pint(stack_t **doubly, unsigned int cline)
 {
 	(void)cline;
 
@@ -82,13 +82,13 @@ void _pint(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _pop - this removes the top element of the stack
+ * __stack_pop - this removes the top element of the stack
  *
  * @doubly: the head of the linked list
  * @cline: the line number
  * Return: has no return
  */
-void _pop(stack_t **doubly, unsigned int cline)
+void __stack_pop(stack_t **doubly, unsigned int cline)
 {
 	stack_t *aux;
 
@@ -104,13 +104,13 @@ void _pop(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _swap - this will swap the top two elements of the stack
+ * __node_swap - this will swap the top two elements of the stack
  *
  * @doubly: this is the head of the linked list
  * @cline: this is the line number
  * Return: has no no return
  */
-void _swap(stack_t **doubly, unsigned int cline)
+void __node_swap(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
 	stack_t *aux = NULL;
